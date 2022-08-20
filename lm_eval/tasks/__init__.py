@@ -4,6 +4,7 @@ from promptsource.templates import DatasetTemplates
 
 from lm_eval.api.task import Task
 
+from . import ludwig
 from . import anli
 from . import blimp
 from . import diabla
@@ -39,6 +40,13 @@ logger = logging.getLogger(__name__)
 
 
 TASK_REGISTRY = {
+    # LUDWIG
+    "ludwig/0-shot": ludwig.ZeroShot,
+    "ludwig/1-shot": ludwig.OneShot,
+    "ludwig/5-shot": ludwig.FiveShot,
+    "ludwig/10-shot": ludwig.TenShot,
+    "ludwig/15-shot": ludwig.FifteenShot,
+    "ludwig/30-shot": ludwig.ThirtyShot,
     # GLUE
     "cola": glue.CoLA,
     "mnli": glue.MNLI,
