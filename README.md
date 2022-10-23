@@ -2,7 +2,8 @@
 This forked repo contains a forked `promptsource` submodule with
 the prompts used in the paper "Large language models are not zero-shot communicators".
 To run the evaluations done in that paper, have a look at `run_all_models.sh`. Note that
-for most of the models, you need large hardware and running locally on a laptop won't work.
+for most of the models, you need large hardware and running locally on a laptop won't work. To change the model to run, look up the model
+identifier on HuggingFace and add it in `run_all_models.sh`.
 
 # `lm-evaluation-harness` + `promptsource`
 
