@@ -27,7 +27,7 @@ To run on the implicature dataset [LUDWIG]([url](https://huggingface.co/datasets
 >> python main.py --model_api_name 'hf-causal' --model_args pretrained=${model} --task_name ludwig/${k}-shot  --template_names 'template_1,template_2,template_3,template_4,template_5,template_6' --device cpu
 ```
 
-Change `k` and `model` to run on different ones.
+Change `k` to ones of `k={0,1,5,10,15,30}` and `model` to a huggingface model identifier to run on different ones.
 
 # `lm-evaluation-harness` + `promptsource`
 
