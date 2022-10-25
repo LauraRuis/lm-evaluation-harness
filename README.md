@@ -5,6 +5,30 @@ To run the evaluations done in that paper, have a look at `run_all_models.sh`. N
 for most of the models, you need large hardware and running locally on a laptop won't work. To change the model to run, look up the model
 identifier on HuggingFace and add it in `run_all_models.sh`.
 
+# Install
+
+This repository can be installed according to the described below as the original repository, but afterwards promptsource needs to be uninstalled because the submodule in this repo for promptsource needs to be used:
+
+```bash
+>> pip uninstall promptsource
+```
+
+Then install the repo locally:
+1. Navigate to the root directory of the [submodule](https://github.com/LauraRuis/promptsource/tree/e4e0952da4673833bc89784c7e47b5d2e44cda09)
+2. Run `pip install -e .` to install the `promptsource` module
+
+# TL;DR
+
+To run on the implicature dataset [LUDWIG]([url](https://huggingface.co/datasets/UCL-DARK/ludwig)) using the prompt templates from the paper where it is introduced, install the repo according to the above and run the following command:
+
+```bash
+>> export k=0
+>> export model="EleutherAI/gpt-neo-125M"
+>> python main.py --model_api_name 'hf-causal' --model_args pretrained=${model} --task_name ludwig/${k}-shot  --template_names 'template_1,template_2,template_3,template_4,template_5,template_6' --device cpu
+```
+
+Change `k` and `model` to run on different ones.
+
 # `lm-evaluation-harness` + `promptsource`
 
 ![](https://github.com/EleutherAI/lm-evaluation-harness/workflows/Build/badge.svg)
