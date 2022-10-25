@@ -1,3 +1,5 @@
+---
+
 # Note for the paper "Large language models are not zero-shot communicators"
 This forked repo contains a forked `promptsource` submodule with
 the prompts used in the paper "Large language models are not zero-shot communicators".
@@ -28,6 +30,8 @@ To run on the implicature dataset [LUDWIG]([url](https://huggingface.co/datasets
 ```
 
 Change `k` to ones of `k={0,1,5,10,15,30}` and `model` to a huggingface model identifier to run on different ones.
+
+---
 
 # `lm-evaluation-harness` + `promptsource`
 
